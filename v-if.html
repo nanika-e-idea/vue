@@ -1,0 +1,76 @@
+<! DOCTYPE html>
+<html>
+<head>
+  <title>My First Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <style>
+    .ok {
+      font-size: 24pt;
+      color: blue;
+      padding: 5px 10px;
+      border: 2px solid red;
+    }
+    .ng {
+      font-size: 20pt;
+      color: gray;
+    }
+    table tr th {
+      font-size: 16pt;
+      color: white;
+      background-color: blue;
+      padding: 5px 15px;
+    }
+    table tr td {
+      font-size: 16pt;
+      color: gray;
+      border: 1px solid gray;
+    }
+    li {
+      font-size: 16pt;
+      color: gray;
+    }
+  </style>
+  <h1>Vue.js</h1>
+  <div id="app">
+    <p v-if="flag" class="ok">
+      これは正常な表示です。
+    </p>
+    <p v-else class="ng">
+      ※現在、問題が発生中です・・・・・・
+    </p>
+    <template v-if="flag">
+      <p>※データをテーブル表示する</p>
+      <table>
+        <tr><th>Name</th><th>Mail</th></tr>
+        <tr><td>Taro</td><td>taro@yamada.mail</td></tr>
+        <tr><td>Hanako</td><td>hanako@flower.mail</td></tr>
+        <tr><td>Sachiko</td><td>sachiko@suzuki.mail</td></tr>
+      </table>
+    </template>
+    <template v-else>
+      <p>※データをリストで表示する</p>
+      <ul>
+        <li>Taroのアドレスは、taro@yamada.mail です。</li>
+        <li>Hanakoのアドレスは、hanako@flower.mail です。</li>
+        <li>Sachikoのアドレスは、sachiko@suzuki.mail です。</li>
+      </ul>
+    </template>
+  </div>
+  <hr>
+  <button onClick="doAction();">click</button>
+  <script>
+    var data = {
+      flag: true,
+    };
+    var app= new Vue({
+      el: '#app',
+      data: data
+    });
+    function doAction () {
+      data.flag = !data.flag;
+    }
+  </script>
+</body>
+</html>
