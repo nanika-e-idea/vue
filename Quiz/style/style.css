@@ -1,0 +1,75 @@
+main{
+  width: 960px;
+  max-width: 100%;
+  margin: auto;
+  background-color: #ccc;
+}
+.answer{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.answer button{
+  width: 125px;
+  height: 125px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.answer button.maru{
+  border-color: #4444aa;
+  background-color: #7777ee;
+}
+.answer button.maru:hover{
+    background-color: #5555ff;
+    cursor: pointer;
+}
+.answer button.batsu{
+  border-color: #aa4444;
+  background-color: #ee7777;
+}
+.answer button.batsu:hover{
+    background-color: #ff5555;
+    cursor: pointer;
+}
+.answer button.retry{
+  width: 300px;
+  height: 100px;
+  margin: auto;
+  border-color: #44aa44;
+  background-color: #77ee77;
+  border-radius: 10px;
+  font-size: 40px;
+}
+.answer button.retry:hover{
+    background-color: #55ff55;
+    cursor: pointer;
+}
+.symbol{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+.circle{
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  border: solid 15px;
+  border-radius: 50px;
+}
+.cross1, .cross2{
+  position: absolute;
+  top: 42px;
+  left: -10px;
+  box-sizing: border-box;
+  width: 120px;
+  height: 15px;
+  border-top: solid 15px;
+}
+.cross1{
+  transform: rotate(45deg);
+}
+.cross2{
+  transform: rotate(-45deg);
+}
