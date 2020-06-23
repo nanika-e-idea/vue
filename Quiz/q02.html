@@ -42,7 +42,10 @@
         </div>
     </section>
 </main>
-<footer></footer>
+<footer>
+    <p><small>&copy;　2020 nanika-e-idea llc</small></p>
+    <p><small>音源: 効果音ラボ https://soundeffect-lab.info/ より</small></p>
+</footer>
 <script>
     var expected = 1;
     var data = {
@@ -60,8 +63,12 @@
     function doAction(select) {
       if (select == data.expected) {
           data.result = 1;
+          var audio = new Audio('sound/correct1.mp3');
+          audio.play();
       }else{
           data.result = 2;
+          var audio = new Audio('sound/incorrect1.mp3');
+          audio.play();
       }
       if (select == 0) {
           data.visible_x = false;
