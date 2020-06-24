@@ -10,6 +10,9 @@ main{
   padding: 1rem;
   background-color: #ccc;
 }
+small{
+    font-size: 0.5rem;
+}
 .answer{
   display: flex;
   justify-content: space-around;
