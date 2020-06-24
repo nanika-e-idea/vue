@@ -8,7 +8,8 @@ main{
   max-width: 100%;
   margin: auto;
   padding: 1rem;
-  background-color: #ccc;
+  border: solid 1px #eee;
+  background-color: #fcfffc;
 }
 small{
     font-size: 0.5rem;
